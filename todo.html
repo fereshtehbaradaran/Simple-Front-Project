@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<head>
+<title>To Do</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="todo.js"></script>
+<style>
+body {
+    background-color: #cccccc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.todoTitle {
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    background-color: blue;
+    border-radius: 10px 10px 0px 0px;
+}
+.box {
+    border-radius: 10px;
+    width: 300px;
+    background-color: white;
+    text-align: center;
+    margin: 20px;
+}
+.mainBox {
+    margin-left: 40%;
+}
+.title {
+    width: 85%;
+    margin-top: 10px;
+}
+.content {
+    width: 85%;
+    height: 70%;
+    margin-top: 5px;
+}
+.first {
+    padding-bottom: 20px;
+    height: 150px;
+}
+.addTodoBtn {
+    margin: 10px;
+}
+.setting {
+    margin-top: 10px;
+    text-align: center;
+}
+.removeTodo {
+    background-color: #ee0000;
+    color: #eeeeee;
+    margin-left: 20px;
+}
+.done {
+    text-decoration: line-through;
+}
+.todoContent {
+    padding: 10px;
+    height: 150px;
+}
+</style>
+</head>
+
+<body>
+    <div class="box mainBox">
+        <div class="todoTitle">
+            New todo
+        </div>
+        <div class="first">
+            <input type="text" id="newTitle" class="title" placeholder="Title" value=""><br>
+            <textarea class="content" id="newContent" placeholder="Content"></textarea>
+        </div>
+        <div>
+            <button class="addTodoBtn">
+                Add todo
+            </button>
+        </div>
+    </div>
+    <div class="setting">
+        <input type="radio" id="all" name="whatToShow" value="all" checked>
+        <label for="all">all</label>
+        <input type="radio" id="completed" name="whatToShow" value="completed">
+        <label for="completed">completed</label>
+        <input type="radio" id="notcompleted" name="whatToShow" value="notcompleted">
+        <label for="notcompletedr">not completed</label>
+    </div>
+
+    <div id="x">
+        <div class="box" style="display: inline-block;" >
+            <div class="todoTitle">
+                New todo
+            </div>
+            <div class="todoContent" style="overflow: auto;">
+                Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. 
+                Sit distinctio, nisi officiis 
+                voluptatum facere animi a 
+                molestias, asperiores eum 
+                aliquam ratione dignissimos. Sed
+                quas officia reiciendis maiores
+                sunt, asperiores temporibus.
+                Lorem ipsum dolor sit amet consectetur 
+                adipisicing elit. Sit distinctio, nisi officiis
+                voluptatum facere animi a molestias, asperiores
+                eum aliquam ratione dignissimos. Sed quas
+                officia reiciendis maiores 
+                sunt, asperiores temporibus.
+            </div>
+            <div style="padding: 20px;">
+                <button class="doneTodo">
+                    Mark done
+                </button>
+                <button class="removeTodo">
+                    Remove todo
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="todo"   style="display: none;">
+        <div class="box" style="display: inline-block;" >
+            <div class="todoTitle">
+                title
+            </div>
+            <div class="todoContent" style="overflow: auto;">
+                content
+            </div>
+            <div style="padding: 20px;">
+                <button class="doneTodo">
+                    Mark done
+                </button>
+                <button class="removeTodo">
+                    Remove todo
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
